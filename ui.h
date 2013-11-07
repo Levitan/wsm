@@ -30,6 +30,7 @@ public slots:
     void saveFile();
     void loadUrl();
     void printPage();
+    void setPlugins();
 
 private slots:
 

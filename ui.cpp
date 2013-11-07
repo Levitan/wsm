@@ -7,6 +7,7 @@ Ui::Ui(QWidget *parent) :
 
 // --------------- Widgets --------------- //
 
+    web = new QWebView;
   // --- Left Block --- //
     leftBlock = new QGroupBox;
 
@@ -102,7 +103,7 @@ Ui::Ui(QWidget *parent) :
     leftBlock->setMinimumWidth(200);
 
   // --- Right Block Settings --- //
-    rightBlock->setTitle(tr("ScreenShot"));
+    rightBlock->setTitle(tr("Browser"));
     rightBlock->setLayout(rightMainLay);
     rightBlock->resize(1280, 0);
 
@@ -113,6 +114,9 @@ Ui::Ui(QWidget *parent) :
     connect(urlLine, SIGNAL(returnPressed()), startBtn, SLOT(click()));
     connect(startBtn, SIGNAL(clicked()), this, SLOT(setUrl()));
     connect(fullEn, SIGNAL(toggled(bool)), hSpin, SLOT(setDisabled(bool)));
+    connect(flashEn, SIGNAL(clicked()), this, SLOT(setPlugins()));
+    connect(jsEn, SIGNAL(clicked()), this, SLOT(setPlugins()));
+    connect(javaEn, SIGNAL(clicked()), this, SLOT(setPlugins()));
 
 }
 
@@ -149,12 +153,14 @@ void Ui::saveFile(){
     }
 }
 
-// --- Load WebPage --- //
-void Ui::loadUrl(){
-    web = new QWebView;
+void Ui::setPlugins(){
     web->settings()->setAttribute(QWebSettings::PluginsEnabled, flashEn->isChecked());
     web->settings()->setAttribute(QWebSettings::JavascriptEnabled, jsEn->isChecked());
     web->settings()->setAttribute(QWebSettings::JavaEnabled, javaEn->isChecked());
+}
+
+// --- Load WebPage --- //
+void Ui::loadUrl(){
     prevArea->setWidget(web);
     web->settings()->clearMemoryCaches();
     web->resize(prevArea->width(), prevArea->height());
@@ -170,7 +176,7 @@ void Ui::printPage(){
     else { hSize = hSpin->value(); }
     QImage *image = new QImage(QSize(wSpin->value(), hSize), QImage::Format_ARGB32);
     QPainter *paint = new QPainter(image);
-    web->page()->setViewportSize(QSize(wSpin->value(), hSize));
+    web->page()->setViewportSize(QSize(wSpin->value() + 16, hSize));
     web->page()->mainFrame()->render(paint);
     paint->end();
     image->save(saveFileName);

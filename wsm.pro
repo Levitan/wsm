@@ -20,6 +20,7 @@ SOURCES += \
 HEADERS  += \
     mainwindow.h \
     ui.h
+TRANSLATIONS = ru_RU.ts
 
 RESOURCES += \
     qrc.qrc

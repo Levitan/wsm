@@ -15,22 +15,15 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="15"/>
-        <source>About TelaTab</source>
-        <translation>О TelaTab</translation>
-    </message>
-    <message>
-        <source>New Screenshot</source>
-        <translation type="obsolete">Новый снимок</translation>
+        <location filename="mainwindow.cpp" line="64"/>
+        <source>About WebScreen Maker</source>
+        <translation>О WebScreen Maker</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="16"/>
         <location filename="mainwindow.cpp" line="37"/>
         <source>Load Url</source>
-        <translation>Открыть адрес</translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation type="obsolete">Сохранить</translation>
+        <translation>Загрузить страницу</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="17"/>
@@ -47,42 +40,30 @@
     <message>
         <location filename="mainwindow.cpp" line="33"/>
         <source>Main</source>
-        <translation>Главная панель</translation>
+        <translation>Основная панель</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="57"/>
-        <source>Tela Tabula</source>
-        <translation>Tela Tabula</translation>
+        <source>WebScreen Maker</source>
+        <translation>WebScreen Maker</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="64"/>
-        <source>&lt;center&gt;&lt;h2&gt;Tela Tabula&lt;/h2&gt;&lt;/center&gt;
-&lt;b&gt;Developer&lt;/b&gt;: &lt;a href=&quot;mailto:vlevitan91@gmail.com&quot;&gt;Vitaly Levitan&lt;/a&gt;</source>
-        <translation>&lt;center&gt;&lt;h2&gt;Tela Tabula&lt;/h2&gt;&lt;/center&gt;
-&lt;b&gt;Разработчик&lt;/b&gt;: &lt;a href=&quot;mailto:vlevitan91@gmail.com&quot;&gt;Виталий Левитан&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <location filename="mainwindow.cpp" line="66"/>
-        <source>About Tela Tabula</source>
-        <translation>О Tela Tabula</translation>
+        <location filename="mainwindow.cpp" line="63"/>
+        <source>Developer</source>
+        <translation>Разработчик</translation>
     </message>
 </context>
 <context>
     <name>Ui</name>
     <message>
-        <location filename="ui.cpp" line="100"/>
-        <source>Properties</source>
-        <translation>Параметры</translation>
-    </message>
-    <message>
         <location filename="ui.cpp" line="14"/>
         <source>Width: </source>
-        <translation>Ширина:</translation>
+        <translation>Ширина: </translation>
     </message>
     <message>
         <location filename="ui.cpp" line="15"/>
         <source>Height: </source>
-        <translation>Высота:</translation>
+        <translation>Высота: </translation>
     </message>
     <message>
         <location filename="ui.cpp" line="26"/>
@@ -92,17 +73,17 @@
     <message>
         <location filename="ui.cpp" line="30"/>
         <source>Flash</source>
-        <translation>Flash</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="ui.cpp" line="31"/>
         <source>JavaScript</source>
-        <translation>JavaScript</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="ui.cpp" line="33"/>
         <source>Java</source>
-        <translation>Java</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="ui.cpp" line="36"/>
@@ -110,9 +91,14 @@
         <translation>Адрес: </translation>
     </message>
     <message>
+        <location filename="ui.cpp" line="100"/>
+        <source>Properties</source>
+        <translation>Параметры</translation>
+    </message>
+    <message>
         <location filename="ui.cpp" line="105"/>
-        <source>ScreenShot</source>
-        <translation>Снимок сайта</translation>
+        <source>Browser</source>
+        <translation>Обозреватель</translation>
     </message>
     <message>
         <location filename="ui.cpp" line="122"/>

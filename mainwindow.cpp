@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     fileMenu = menuBar()->addMenu(tr("&File"));
     aboutMenu = menuBar()->addMenu(tr("Support"));
 
-    about = new QAction(QIcon(":/img/about-ico.png"), tr("About TelaTab"), this);
+    about = new QAction(QIcon(":/img/about-ico.png"), tr("About WebScreen Maker"), this);
     open = new QAction(QIcon(":/img/url-min.png"), tr("Load Url"), this);
     save = new QAction(QIcon(":/img/save-min.png"), tr("Make ScreenShot"), this);
     quitAct = new QAction(QIcon(":/img/exit.png"), tr("Quit"), this);
@@ -54,16 +54,14 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui, SIGNAL(loadStart()), this, SLOT(disableBtns()));
     setCentralWidget(ui);
     resize(500, 300);
-    setWindowTitle(tr("Tela Tabula"));
-    //setWindowIcon(QIcon(":/img/linshot.png"));
+    setWindowTitle(tr("WebScreen Maker"));
 
 }
 
 void MainWindow::aboutMsg(){
     QMessageBox *abMsg = new QMessageBox;
-    abMsg->setText(tr("<center><h2>Tela Tabula</h2></center>\n"
-                                     "<b>Developer</b>: <a href=\"mailto:vlevitan91@gmail.com\">Vitaly Levitan</a>"));
-    abMsg->setWindowTitle(tr("About Tela Tabula"));
+    abMsg->setText(QString::fromUtf8("<center><h2>WebScreen Maker 0.1.1b</h2></center><br><b>") + tr("Developer") + QString::fromUtf8("</b>: <a href=\"mailto:vlevitan91@gmail.com\">Vitaly Levitan</a>"));
+    abMsg->setWindowTitle(tr("About WebScreen Maker"));
     abMsg->setIconPixmap(QPixmap(":/img/about.png"));
     abMsg->exec();
 }

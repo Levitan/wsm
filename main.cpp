@@ -11,7 +11,6 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForTr(unicode);
     QTranslator appTransl;
     appTransl.load(":/" + QLocale::system().name());
-    //appTransl.load(QString::fromUtf8("/home/levitan/Документы/cpp/telatab/ru_RU.qm"));
     a.installTranslator(&appTransl);
     MainWindow w;
     w.show();
